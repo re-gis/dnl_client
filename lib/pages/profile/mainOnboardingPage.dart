@@ -72,14 +72,14 @@ class _MainOnboardingPageState extends State<MainOnboardingPage> {
                         return Container(
                           color: Colors.white,
                           child: Center(
-                            child: gender(),
+                            child: Gender(),
                           ),
                         );
                       }else if(index == 2){
                         return Container(
                           color: Colors.white,
                           child: Center(
-                            child: birthDay(),
+                            child: BirthDay(),
                           ),
                         );
                       }
@@ -91,7 +91,7 @@ class _MainOnboardingPageState extends State<MainOnboardingPage> {
                   Align(
                     alignment: Alignment.bottomCenter,
                     child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(25.0),
                       child: Row(
                         children: [
                           Expanded(
