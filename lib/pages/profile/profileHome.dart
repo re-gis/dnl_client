@@ -1,6 +1,8 @@
 // ignore_for_file: unused_import, prefer_const_constructors, prefer_const_literals_to_create_immutables, camel_case_types, prefer_const_constructors_in_immutables
 
 import 'package:dnl_ui/components/CustomButton.dart';
+import 'package:dnl_ui/pages/profile/mainOnboardingPage.dart';
+import 'package:dnl_ui/pages/profile/name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -51,7 +53,12 @@ class profileHome extends StatelessWidget {
 
                 
 
-                CustomButton(title: "LET'S DO IT", color: Colors.white, textColor: Color(0xFFFB685E), borderColor: Colors.transparent, onPressed: (){})
+                CustomButton(title: "LET'S DO IT", color: Colors.white, textColor: Color(0xFFFB685E), borderColor: Colors.transparent, onPressed: (){Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return MainOnboardingPage();
+                  }),
+                );})
 
                 // Add more widgets as needed
               ],
