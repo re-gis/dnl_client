@@ -104,8 +104,8 @@ class _MainOnboardingPageState extends State<MainOnboardingPage> {
                               },
                               style: ElevatedButton.styleFrom(
                                 primary: Colors.white,
-                                onPrimary: Colors.red,
-                                side: BorderSide(color: Colors.red),
+                                onPrimary: Color(0xFFE94057),
+                                side: BorderSide(color: Color(0xFFE94057)),
                                 padding: EdgeInsets.all(12.0),
                               ),
                               child: Text("BACK"),
@@ -127,7 +127,7 @@ class _MainOnboardingPageState extends State<MainOnboardingPage> {
                                 // Handle the action you want when the "CONFIRM" button is pressed
                               },
                               style: ElevatedButton.styleFrom(
-                                primary: Colors.red, // Background color
+                                primary: Color(0xFFE94057), // Background color
                                 onPrimary: Colors.white, // Text color
                                 padding: EdgeInsets.all(12.0), // Add padding around the button
                               ),

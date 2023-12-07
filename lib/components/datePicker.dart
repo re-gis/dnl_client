@@ -1,24 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Custom Date Picker'),
-        ),
-        body: CustomDatePicker(),
-      ),
-    );
-  }
-}
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomDatePicker extends StatefulWidget {
   @override
@@ -45,13 +28,13 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
   String _getMonthName(int month) {
     switch (month) {
       case 1:
-        return 'January';
+        return 'Jan';
       case 2:
-        return 'February';
+        return 'Feb';
       case 3:
-        return 'March';
+        return 'Mar';
       case 4:
-        return 'April';
+        return 'Apr';
       case 5:
         return 'May';
       case 6:
@@ -59,17 +42,17 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
       case 7:
         return 'July';
       case 8:
-        return 'August';
+        return 'Aug';
       case 9:
-        return 'September';
+        return 'Sept';
       case 10:
-        return 'October';
+        return 'Oct';
       case 11:
-        return 'November';
+        return 'Nov';
       case 12:
-        return 'December';
+        return 'Dec';
       default:
-        return 'Invalid Month';
+        return 'Jan';
     }
   }
 
@@ -90,6 +73,12 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
       year = value;
     });
   }
+
+  final text7 = TextStyle(fontSize: 22, fontWeight: FontWeight.w600);
+  final monthText = TextStyle(
+      fontSize: 22, fontWeight: FontWeight.w600, color: Colors.red[300]);
+  final text8 = TextStyle(
+      fontSize: 22, fontWeight: FontWeight.w600, color: Colors.grey[300]);
 
   @override
   Widget build(BuildContext context) {
@@ -127,11 +116,8 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          '${day - 1}',
-                          style: TextStyle(
-                            color: Colors
-                                .grey, // Set the color of the previous day to grey
-                          ),
+                          '${day + 1}',
+                          style: GoogleFonts.manrope(textStyle: text8),
                         ),
                       ],
                     ),
@@ -142,6 +128,7 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
+                          width: 65,
                           padding: EdgeInsets.all(8),
                           decoration: BoxDecoration(
                             border: Border.all(
@@ -152,10 +139,8 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
                           ),
                           child: Text(
                             '$day',
-                            style: TextStyle(
-                              color: Colors
-                                  .black, // Set the color of the current day text to black
-                            ),
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.manrope(textStyle: text7),
                           ),
                         ),
                       ],
@@ -167,11 +152,8 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          '${day + 1}',
-                          style: TextStyle(
-                            color: Colors
-                                .grey, // Set the color of the next day to grey
-                          ),
+                          '${day - 1}',
+                          style: GoogleFonts.manrope(textStyle: text8),
                         ),
                       ],
                     ),
@@ -210,38 +192,30 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
                     ),
                     SizedBox(height: 4), // some vertical spacing
                     Text(
-                      _getMonthName(month +
-                          1), // Replace with your function to get month name
-                      style: TextStyle(
-                        color: Colors
-                            .grey, // Set the color of the next month text to grey
-                      ),
+                      _getMonthName(month + 1),
+                      style: GoogleFonts.manrope(textStyle: monthText),
                     ),
                     SizedBox(height: 4), // Add some vertical spacing
                     Container(
+                      width: 65,
                       padding: EdgeInsets.all(8), // Add padding
                       decoration: BoxDecoration(
                           border: Border.all(
                             color: Colors
                                 .red, // Add red border to highlight the current month
                           ),
-                          borderRadius: BorderRadius.circular(8)),
+                          borderRadius: BorderRadius.circular(5)),
                       child: Text(
-                        '$month',
-                        style: TextStyle(
-                          color: Colors
-                              .black, // Set the color of the current month text to black
-                        ),
+                        _getMonthName(month),
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.manrope(textStyle: monthText),
                       ),
                     ),
                     SizedBox(height: 4), // Add some vertical spacing
                     Text(
                       _getMonthName(month -
                           1), // Replace with your function to get month name
-                      style: TextStyle(
-                        color: Colors
-                            .grey, // Set the color of the previous month text to grey
-                      ),
+                      style: GoogleFonts.manrope(textStyle: monthText),
                     ),
                     SizedBox(height: 10), // Add some vertical spacing
                     GestureDetector(
@@ -273,10 +247,7 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
                     SizedBox(height: 4),
                     Text(
                       '${year + 1}',
-                      style: TextStyle(
-                        color: Colors
-                            .grey, // Set the color of the next year text to grey
-                      ),
+                      style: GoogleFonts.manrope(textStyle: text8),
                     ),
                     SizedBox(height: 4),
 
@@ -290,20 +261,14 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
                           ),
                       child: Text(
                         '$year',
-                        style: TextStyle(
-                          color: Colors
-                              .black, // Set the color of the current year text
-                        ),
+                        style: GoogleFonts.manrope(textStyle: text7),
                       ),
                     ),
 
                     SizedBox(height: 4),
                     Text(
                       '${year - 1}',
-                      style: TextStyle(
-                        color: Colors
-                            .grey, // Set the color of the previous year text to grey
-                      ),
+                      style: GoogleFonts.manrope(textStyle: text8),
                     ), // Add some vertical spacing
                     SizedBox(height: 4),
                     GestureDetector(

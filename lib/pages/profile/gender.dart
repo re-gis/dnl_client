@@ -125,7 +125,7 @@ class _GenderState extends State<Gender> {
                           firstValue = value!;
                         });
                       },
-                      activeColor: firstValue ? Colors.red : Colors.transparent,
+                      activeColor: firstValue ? Color(0xFFE94057) : Colors.transparent,
                     ),// Add some spacing between the checkbox and the text
                     Text("Visible on my profile",style: GoogleFonts.manrope(textStyle: visibleText),),
                   ],
