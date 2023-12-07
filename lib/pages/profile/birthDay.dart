@@ -26,7 +26,7 @@ class _BirthDayState extends State<BirthDay> {
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: SingleChildScrollView(
-           child:Column(
+           child: Column(
             children: [
               Container(
                 margin: EdgeInsets.only(top: 30),
@@ -43,15 +43,15 @@ class _BirthDayState extends State<BirthDay> {
               const SizedBox(
                 height: 15,
               ),
-              
+           
               Text(
                 "Birthday and zodiac sign",
                 style: GoogleFonts.manrope(textStyle: title6),
               ),
               const SizedBox(
-                height: 10,
+                height: 20,
               ),
-          
+                     
               SingleChildScrollView(
                 scrollDirection: Axis.vertical,
                 child: Column(
@@ -109,30 +109,14 @@ class _BirthDayState extends State<BirthDay> {
                     ],
                   ),
               ),
-          
+                     
               const SizedBox(
                 height: 10,
               ),
-          
-              Row(
-                children: [
-                  Checkbox(
-                    value: firstValue,
-                    onChanged: (value) {
-                      setState(() {
-                        firstValue = value!;
-                      });
-                    },
-                    activeColor: firstValue ? Colors.red : Colors.transparent,
-                  ),
-                  Text(
-                    "Visible on my profile",
-                    style: GoogleFonts.manrope(textStyle: visibleText),
-                  ),
-                ],
-              ),
+                     
+             
             ],
-          ),
+                     ),
       ),
     );
   }

@@ -76,7 +76,9 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
 
   final text7 = TextStyle(fontSize: 22, fontWeight: FontWeight.w600);
   final monthText = TextStyle(
-      fontSize: 22, fontWeight: FontWeight.w600, color: Colors.red[300]);
+      fontSize: 22, fontWeight: FontWeight.w600, color: Colors.red[100]);
+  final monthText1 = TextStyle(
+      fontSize: 22, fontWeight: FontWeight.w600, color: Colors.red[30]);
   final text8 = TextStyle(
       fontSize: 22, fontWeight: FontWeight.w600, color: Colors.grey[300]);
 
@@ -128,14 +130,15 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                          width: 65,
+                          width: 100,
                           padding: EdgeInsets.all(8),
                           decoration: BoxDecoration(
                             border: Border.all(
                               color: Colors
                                   .red, // Add red border to highlight the current day
+                                  width: 2.0,
                             ),
-                            borderRadius: BorderRadius.circular(5),
+                            borderRadius: BorderRadius.circular(12),
                           ),
                           child: Text(
                             '$day',
@@ -195,20 +198,21 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
                       _getMonthName(month + 1),
                       style: GoogleFonts.manrope(textStyle: monthText),
                     ),
-                    SizedBox(height: 4), // Add some vertical spacing
+                    SizedBox(height: 10), // Add some vertical spacing
                     Container(
-                      width: 65,
+                      width: 100,
                       padding: EdgeInsets.all(8), // Add padding
                       decoration: BoxDecoration(
                           border: Border.all(
                             color: Colors
                                 .red, // Add red border to highlight the current month
+                                width: 2.0,
                           ),
-                          borderRadius: BorderRadius.circular(5)),
+                          borderRadius: BorderRadius.circular(12)),
                       child: Text(
                         _getMonthName(month),
                         textAlign: TextAlign.center,
-                        style: GoogleFonts.manrope(textStyle: monthText),
+                        style: GoogleFonts.manrope(textStyle: monthText1),
                       ),
                     ),
                     SizedBox(height: 4), // Add some vertical spacing
@@ -250,21 +254,23 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
                       style: GoogleFonts.manrope(textStyle: text8),
                     ),
                     SizedBox(height: 4),
-
+    
                     // Add some vertical spacing
                     Container(
+                      width: 100,
                       padding: EdgeInsets.all(8),
                       decoration: BoxDecoration(
-                          border: Border.all(color: Colors.red),
+                          border: Border.all(color: Colors.red,width: 2.0,),
                           borderRadius: BorderRadius.circular(
-                              5) // Add red border to highlight the current year
+                              12) // Add red border to highlight the current year
                           ),
                       child: Text(
                         '$year',
+                        textAlign: TextAlign.center,
                         style: GoogleFonts.manrope(textStyle: text7),
                       ),
                     ),
-
+    
                     SizedBox(height: 4),
                     Text(
                       '${year - 1}',

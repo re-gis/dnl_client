@@ -76,11 +76,16 @@ class _MainOnboardingPageState extends State<MainOnboardingPage> {
                           ),
                         );
                       }else if(index == 2){
-                        return Container(
-                          color: Colors.white,
-                          child: Center(
-                            child: BirthDay(),
+                        return SingleChildScrollView(
+                          child: Container(
+                            width: double.infinity,
+                            height: MediaQuery.of(context).size.height - 105,
+                            color: Colors.white,
+                            child: Center(
+                              child: BirthDay(),
+                            ),
                           ),
+                          
                         );
                       }
                       // Your pages here (names(), names(), ...)
