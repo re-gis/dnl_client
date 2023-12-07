@@ -43,6 +43,7 @@ class _BirthDayState extends State<BirthDay> {
               const SizedBox(
                 height: 15,
               ),
+              
               Text(
                 "Birthday and zodiac sign",
                 style: GoogleFonts.manrope(textStyle: title6),
