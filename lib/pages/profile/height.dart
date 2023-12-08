@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, duplicate_ignore
+
 import "package:flutter/cupertino.dart";
 import 'package:google_fonts/google_fonts.dart';
 import "package:flutter/material.dart";
@@ -12,6 +14,7 @@ class ProfilePhysical extends StatefulWidget {
 }
 
 class _ProfilePhysicalState extends State<ProfilePhysical> {
+  // ignore: prefer_const_constructors
   final title6 = TextStyle(fontSize: 24, fontWeight: FontWeight.w700);
   final text1 = TextStyle(fontSize: 17.0, fontWeight: FontWeight.bold);
   final visibleText = TextStyle(fontSize: 15, fontWeight: FontWeight.w500);

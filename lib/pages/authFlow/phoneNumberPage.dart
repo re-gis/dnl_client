@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types, prefer_const_constructors
+// ignore_for_file: camel_case_types, prefer_const_constructors, file_names
 
 import 'package:dnl_ui/components/CountryPicker.dart';
 import 'package:dnl_ui/pages/authFlow/otpPage.dart';
@@ -56,7 +56,7 @@ class phoneNumberPage extends StatelessWidget {
                           Navigator.pop(context);
                         },
                         child: Container(
-                          padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+                          padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
                           decoration: BoxDecoration(
                             color: Colors.transparent, // Set the background color
                             borderRadius: BorderRadius.circular(25),
@@ -86,7 +86,7 @@ class phoneNumberPage extends StatelessWidget {
                           );
                         },
                         child: Container(
-                          padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+                          padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
                           decoration: BoxDecoration(
                             color: Color(0xFFFB685E), // Set the background color for confirmation
                             borderRadius: BorderRadius.circular(25),

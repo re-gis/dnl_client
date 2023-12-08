@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api, prefer_const_constructors, avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -15,7 +17,7 @@ class _DrinkPageState extends State<DrinkPage> {
   final title6 = TextStyle(fontSize: 24, fontWeight: FontWeight.w700);
   final text1 = TextStyle(fontSize: 17.0, fontWeight: FontWeight.bold);
   final visibleText = TextStyle(fontSize: 15, fontWeight: FontWeight.w500);
-  final textt = TextStyle(fontSize: 18,fontWeight: FontWeight.w700);
+  final textt = TextStyle(fontSize: 16,fontWeight: FontWeight.w700);
 
   @override
   Widget build(BuildContext context) {

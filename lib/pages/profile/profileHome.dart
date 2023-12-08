@@ -1,4 +1,4 @@
-// ignore_for_file: unused_import, prefer_const_constructors, prefer_const_literals_to_create_immutables, camel_case_types, prefer_const_constructors_in_immutables
+// ignore_for_file: unused_import, prefer_const_constructors, prefer_const_literals_to_create_immutables, camel_case_types, prefer_const_constructors_in_immutables, file_names, use_key_in_widget_constructors
 
 import 'package:dnl_ui/components/CustomButton.dart';
 import 'package:dnl_ui/pages/profile/mainOnboardingPage.dart';

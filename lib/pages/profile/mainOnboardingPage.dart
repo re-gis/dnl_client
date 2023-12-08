@@ -86,71 +86,66 @@ class _MainOnboardingPageState extends State<MainOnboardingPage> {
                       } else if (index == 2) {
                         return Column(
                           children: [
-                                Container(
-                                width: double.infinity,
-                                height:
-                                    MediaQuery.of(context).size.height - 105,
-                                color: Colors.white,
-                                child: Center(
-                                  child: BirthDay(),
-                                ),
+                            Container(
+                              width: double.infinity,
+                              height: MediaQuery.of(context).size.height - 105,
+                              color: Colors.white,
+                              child: Center(
+                                child: BirthDay(),
                               ),
+                            ),
                           ],
                         );
-                      }else if (index == 3) {
+                      } else if (index == 3) {
                         return Column(
                           children: [
-                                Container(
-                                width: double.infinity,
-                                height:
-                                    MediaQuery.of(context).size.height - 105,
-                                color: Colors.white,
-                                child: Center(
-                                  child: ProfilePhysical(),
-                                ),
+                            Container(
+                              width: double.infinity,
+                              height: MediaQuery.of(context).size.height - 105,
+                              color: Colors.white,
+                              child: Center(
+                                child: ProfilePhysical(),
                               ),
+                            ),
                           ],
                         );
-                      }else if (index == 4) {
+                      } else if (index == 4) {
                         return Column(
                           children: [
-                                Container(
-                                width: double.infinity,
-                                height:
-                                    MediaQuery.of(context).size.height - 105,
-                                color: Colors.white,
-                                child: Center(
-                                  child: RelationPage(),
-                                ),
+                            Container(
+                              width: double.infinity,
+                              height: MediaQuery.of(context).size.height - 105,
+                              color: Colors.white,
+                              child: Center(
+                                child: RelationPage(),
                               ),
+                            ),
                           ],
                         );
-                      }else if (index == 5) {
+                      } else if (index == 5) {
                         return Column(
                           children: [
-                                Container(
-                                width: double.infinity,
-                                height:
-                                    MediaQuery.of(context).size.height - 105,
-                                color: Colors.white,
-                                child: Center(
-                                  child: smokePage(),
-                                ),
+                            Container(
+                              width: double.infinity,
+                              height: MediaQuery.of(context).size.height - 105,
+                              color: Colors.white,
+                              child: Center(
+                                child: smokePage(),
                               ),
+                            ),
                           ],
                         );
-                      }else if (index == 6) {
+                      } else if (index == 6) {
                         return Column(
                           children: [
-                                Container(
-                                width: double.infinity,
-                                height:
-                                    MediaQuery.of(context).size.height - 105,
-                                color: Colors.white,
-                                child: Center(
-                                  child: DrinkPage(),
-                                ),
+                            Container(
+                              width: double.infinity,
+                              height: MediaQuery.of(context).size.height - 105,
+                              color: Colors.white,
+                              child: Center(
+                                child: DrinkPage(),
                               ),
+                            ),
                           ],
                         );
                       }
@@ -167,10 +162,16 @@ class _MainOnboardingPageState extends State<MainOnboardingPage> {
                           Expanded(
                             child: ElevatedButton(
                               onPressed: () {
-                                controller.previousPage(
-                                  duration: Duration(milliseconds: 500),
-                                  curve: Curves.ease,
-                                );
+                                if (currentPage == 0) {
+                                  // Handle the navigation to the home page here
+                                  // For example, you can use Navigator.pop() to return to the previous screen
+                                  Navigator.pop(context);
+                                } else {
+                                  controller.previousPage(
+                                    duration: Duration(milliseconds: 500),
+                                    curve: Curves.ease,
+                                  );
+                                }
                               },
                               style: ElevatedButton.styleFrom(
                                 primary: Colors.white,

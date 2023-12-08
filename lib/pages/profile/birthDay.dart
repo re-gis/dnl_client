@@ -1,9 +1,8 @@
-import 'dart:ffi';
+// ignore_for_file: unnecessary_import, file_names, prefer_const_constructors_in_immutables, library_private_types_in_public_api, prefer_const_constructors
 
 import 'package:dnl_ui/components/datePicker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class BirthDay extends StatefulWidget {
@@ -14,13 +13,11 @@ class BirthDay extends StatefulWidget {
 }
 
 class _BirthDayState extends State<BirthDay> {
-  DateTime _selectedDate = DateTime.now();
   final title6 = TextStyle(fontSize: 24, fontWeight: FontWeight.w700);
   final text1 = TextStyle(fontSize: 17.0, fontWeight: FontWeight.bold);
   final ageText = TextStyle(fontSize: 18, fontWeight: FontWeight.w600);
   final valueText = TextStyle(fontSize: 43, fontWeight: FontWeight.bold);
   final lookingText = TextStyle(fontSize: 18, fontWeight: FontWeight.w500);
-  int _selectedDateValue = 0;
   bool firstValue = false;
   final visibleText = TextStyle(fontSize: 15, fontWeight: FontWeight.w500);
 

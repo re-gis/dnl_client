@@ -1,4 +1,4 @@
-// ignore_for_file: unused_import, prefer_const_constructors, camel_case_types
+// ignore_for_file: unused_import, prefer_const_constructors, camel_case_types, file_names
 
 import 'package:dnl_ui/pages/profile/profileHome.dart';
 import 'package:flutter/material.dart';
@@ -170,7 +170,7 @@ class otpPage extends StatelessWidget {
                         Navigator.pop(context);
                       },
                       child: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+                        padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
                         decoration: BoxDecoration(
                           color: Colors.transparent, // Set the background color
                           borderRadius: BorderRadius.circular(25),
@@ -200,7 +200,7 @@ class otpPage extends StatelessWidget {
                         );
                       },
                       child: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+                        padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
                         decoration: BoxDecoration(
                           color: Color(0xFFFB685E), // Set the background color for confirmation
                           borderRadius: BorderRadius.circular(25),
